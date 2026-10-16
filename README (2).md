@@ -98,30 +98,7 @@ The manuscript compares CKD-GraphSurv with:
 
 Evaluation includes time-dependent AUC, survival concordance, Brier scores, calibration, decision-curve analysis, paired-bootstrap comparisons, component ablations, and risk stratification. Interpretation uses integrated gradients alongside graph and temporal attention. These explanations describe model behaviour and do not establish causal relationships.
 
-## Reproducing the study
-
-A complete reproduction requires the CKD implementation and its supporting data-processing configuration. Before reporting a reproduced result:
-
-1. Obtain the original cohort files under their applicable access and reuse terms.
-2. Match the manuscript's patient eligibility, endpoint definitions, time origin, observation windows, and censoring rules.
-3. Preserve patient-level partitions and the paired Ajou single-visit evaluation.
-4. Fit preprocessing, model selection, recalibration, and risk-group thresholds using their designated development partitions.
-5. Train with the five reported seeds and retain selected checkpoints and configuration records.
-6. Evaluate on the held-out and external settings using the appropriate outcome-specific metrics.
-7. Record software versions, hardware, random seeds, cohort sizes, and uncertainty estimates with the exported results.
-
-Add verified installation, training, and evaluation commands after the CKD source code is available. Do not use the intrusion-detection notebook as the execution entry point for this study.
-
-## Limitations and intended use
-
-CKD-GraphSurv is intended for research. Performance depends on input availability and cohort characteristics. Single-visit restriction reduces internal discrimination, and external calibration requires further assessment. The reported experiments do not establish readiness for clinical deployment or a treatment recommendation system.
-
 ## Citation
 
 **CKD-GraphSurv: Knowledge-Guided Graph and Temporal Learning for Chronic Kidney Disease Risk Prediction Across Cohorts.**
 
-Publication metadata is pending. Add the verified author list, venue, publication year, and DOI when available. The supplied manuscript contains placeholder author information, so no bibliographic record is asserted here.
-
-## License
-
-No software license is specified in the supplied materials. Add the copyright holder's chosen `LICENSE` file before distributing implementation code. Dataset permissions are governed separately by their original providers.
